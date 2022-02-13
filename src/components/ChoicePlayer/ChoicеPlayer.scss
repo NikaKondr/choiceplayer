@@ -1,0 +1,85 @@
+.choice-player {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    transform: translate(0%, -55%);
+    opacity: 0;
+    transition: all 0.6s;
+
+    &_active {
+        opacity: 1;
+        transform: translate(0%, 0%);
+    }
+}
+
+@media (aspect-ratio: 577/540) {
+    .choice-player-card {
+        width: 34.351851851851855vh;
+        height: 42.03703703703704vh;
+
+        &::before {
+            transform: scale(0.65) rotate(7.54deg);
+            transform-origin: left -46%;
+        }
+
+        &-container {
+            &__image {
+                transform: scale(0.6);
+                transform-origin: bottom right;
+            }
+            &-hide {
+                transform: scale(0.7);
+                transform-origin: left 76%;
+            }
+
+            &-footer {
+                bottom: -12.148148vh;
+            }
+        }
+
+        &-null {
+            padding-top: 0;
+            transform: scale(0.7);
+            transform-origin: center center;
+
+            &__img {
+                background-size: contain;
+            }
+        }
+    }
+}
+
+@media (aspect-ratio: 4/3), (aspect-ratio: 5/4) {
+    .choice-player-card {
+        width: 40.666666666666664vh;
+        height: 49.666666666666664vh;
+
+        &::before {
+            transform: scale(0.8) rotate(7.54deg);
+            transform-origin: left -46%;
+        }
+
+        &-container {
+            &__image {
+                transform: scale(0.75);
+                transform-origin: bottom right;
+            }
+            &-hide {
+                transform: scale(0.8);
+                transform-origin: left bottom;
+            }
+        }
+
+        &-null {
+            padding-top: 0;
+            transform: scale(0.8);
+            transform-origin: center bottom;
+        }
+    }
+}
