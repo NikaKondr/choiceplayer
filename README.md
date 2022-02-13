@@ -136,3 +136,8 @@ data = {
 Если вы захотите использовать это на своем сервере, то перед билдом вам нужно удалить файл **mp.js**
 
 и всего его импорты.
+
+
+![enter image description here](https://cdn.discordapp.com/attachments/870735155176800307/942564404917071872/unknown.png)
+
+![enter image description here](https://cdn.discordapp.com/attachments/870735155176800307/942564454313381968/unknown.png)
