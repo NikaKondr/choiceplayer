@@ -113,23 +113,23 @@ data = {
 
 ### Выбор персонажа
 
-``('choicePlayer', 'selectPlayer', {slot: '0', id: 1234})``
+``('choicePlayer', 'selectPlayer', {"slot":"0","id":12521})``
 
   
 
 ### Удаление персонажа
 
-``('choicePlayer', 'deletePlayer', {slot: '0', id: 1234})``
+``('choicePlayer', 'deletePlayer', {"slot":"0","id":12521})``
 
   
 
 ### Создание персонажа
 
-``('choicePlayer', 'createPlayer', {slot: '0'})``
+``('choicePlayer', 'createPlayer', {"slot":"1"})``
 
 ### Выбор донатного слота
 
-``('choicePlayer', 'selectDonateSlot', {slot: '0'})``
+``('choicePlayer', 'selectDonateSlot', {"slot":"2"})``
 
 # Примечание
 
