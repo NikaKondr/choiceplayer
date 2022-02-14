@@ -1,7 +1,7 @@
 import * as React   from 'react';
 import cn           from 'classnames';
 import { entries }  from 'mobx';
-import { mp }       from '../../../../utils/mp'
+import EventManager from '../../../../utils/EventManger'
 
 import './Cards.scss'
 
@@ -61,8 +61,8 @@ const Cards = ({el, id, setCurrentAccount, currentAccount}) => {
                         </div>
                     </div>
                     <div className='choice-player-card-container-footer'>
-                        <div className='choice-player-card-container-footer__choice' onClick={() => mp.trigger('choicePlayer', 'selectPlayer', JSON.stringify({slot: id, id: el.id}))}>Выбрать</div>
-                        <div className='choice-player-card-container-footer__delete' onClick={() => mp.trigger('choicePlayer', 'deletePlayer', JSON.stringify({slot: id, id: el.id}))}>Удалить</div>
+                        <div className='choice-player-card-container-footer__choice' onClick={() => EventManager.trigger('choicePlayer', 'selectPlayer', {slot: id, id: el.id})}>Выбрать</div>
+                        <div className='choice-player-card-container-footer__delete' onClick={() => EventManager.trigger('choicePlayer', 'deletePlayer',{slot: id, id: el.id})}>Удалить</div>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@ const Cards = ({el, id, setCurrentAccount, currentAccount}) => {
                 <div className='choice-player-card-null__img'></div>
                 <div className='choice-player-card-null__text'>{el.type === 'donate' ? 'Слот недоступен' : 'Слот пустой'} </div>
                 <div className='choice-player-card-null__desc'>{el.type === 'donate' ? 'Чтобы разблокировать дополнительный слот приобретите его в магазине' : 'Нажмите кнопку создать, чтобы перейти в раздел создания персонажа' }</div>
-                <div className='choice-player-card-null__button' onClick={() => el.type === 'donate' ? mp.trigger('choicePlayer', 'selectDonateSlot', JSON.stringify({slot: id})) : mp.trigger('choicePlayer', 'createPlayer', JSON.stringify({slot: id}))}>{el.type === 'donate' ? 'Выбрать' : 'Создать'}</div>
+                <div className='choice-player-card-null__button' onClick={() => el.type === 'donate' ? EventManager.trigger('choicePlayer', 'selectDonateSlot', {slot: id}) : EventManager.trigger('choicePlayer', 'createPlayer', {slot: id})}>{el.type === 'donate' ? 'Выбрать' : 'Создать'}</div>
             </div>
         }
 
