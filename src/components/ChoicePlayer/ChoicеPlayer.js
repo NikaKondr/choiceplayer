@@ -25,10 +25,6 @@ const ChoicеPlayer = ({store}) => {
         return () => EventManager.removeHandler('choicePlayer');
      },[store])
 
-    window.testing = {
-        test: (obj) => store.changePlayer(obj)
-    }
-
     return <div ref={screen}  className='choice-player'>
         {entries(store.players).map((entry) => {
             const id = entry[0];
