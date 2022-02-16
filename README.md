@@ -1,5 +1,6 @@
 # Окно выбора персонажа
 
+### [**DEMO**](https://nikakondr.github.io/choiceplayer/)
   
 
 Дизайн взят с [ragemp.pro](https://ragemp.pro/resources/dizajn-interfejsa-vybor-personazha-bez-verstki-dlja-servera-rage-multiplayer.320/)
