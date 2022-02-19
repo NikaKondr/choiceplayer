@@ -1,5 +1,6 @@
 # Окно выбора персонажа
 
+### [**DEMO**](https://nikakondr.github.io/choiceplayer/)
   
 
 Дизайн взят с [ragemp.pro](https://ragemp.pro/resources/dizajn-interfejsa-vybor-personazha-bez-verstki-dlja-servera-rage-multiplayer.320/)
@@ -48,7 +49,7 @@
 
 ### Отобразить интерфейс
 
-``('app', 'setComponent', 'choicePlayer')``
+``('app', {type: 'setComponent', data: 'choicePlayer'})``
 
   
 
@@ -56,7 +57,7 @@
 
   
 
-``('choicePlayer', 'setData', obj)``
+``('choicePlayer', {type: 'setData', data: obj})``
 
 **Хранение данных**
 
@@ -90,7 +91,7 @@ data= {
 
   ### Изменение одного слота с персонажем
 
-``('choicePlayer', 'changePlayer', obj)``
+``('choicePlayer', {type: 'changePlayer', data: obj})``
 
 **Хранение данных**
 

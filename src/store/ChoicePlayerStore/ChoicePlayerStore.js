@@ -1,6 +1,6 @@
 import { makeObservable, observable, action} from 'mobx';
 
-export default class ChoicePlayerStore {
+class ChoicePlayerStore {
     constructor() {
         makeObservable(this, {
             players: observable,
@@ -27,10 +27,10 @@ export default class ChoicePlayerStore {
             },
         },
         1: {
-            type: 'donate',
+            type: null,
         },
         2: {
-            type: null,
+            type: 'donate',
         },
     }
 
@@ -41,8 +41,6 @@ export default class ChoicePlayerStore {
     changePlayer(obj) {
         this.players[obj.slot] = obj.data;
     }
-    
-
-    destroy() {
-	}
 }
+
+export default new ChoicePlayerStore();

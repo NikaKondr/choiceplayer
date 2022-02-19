@@ -79,4 +79,4 @@ const Cards = ({el, id, setCurrentAccount, currentAccount}) => {
     </div>
 };
 
-export default React.memo(Cards);
+export default Cards;
