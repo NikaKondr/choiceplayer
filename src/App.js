@@ -13,7 +13,7 @@ function App() {
 	React.useEffect(() => {
 		EventManager.addHandler('app', value => {
 			if (value.type === 'setComponent') {
-			setComponent('choicePlayer');
+			setComponent(value.data);
 			} else return;
 		});
 
